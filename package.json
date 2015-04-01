@@ -29,6 +29,9 @@
   "devDependencies": {
     "dotenv": "^1.1.0"
   },
-  "engine": "node >= 0.10.0",
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.2.14"
+  },
   "license": "MIT"
 }
