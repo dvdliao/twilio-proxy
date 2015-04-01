@@ -35,7 +35,7 @@ app.use('/message', message);
 // all  other routes that are not defined
 router.route('*')
 	.all(function(req, res) {
-        res.json({status: "not found"});
+        res.status(404).json({status: "not found"});
     });
 
 // register router
