@@ -56,9 +56,9 @@ function sendMessage(resp, userName, message, from, to) {
 }
 
 router.post('/', function(req, res, next) {
-
+	var options = { url: 'https://quiet-springs-2100.herokuapp.com/message' };
 	// request did not come from twilio
-	if (!twilio.validateExpressRequest(req, TWILIO_AUTH_TOKEN)) {
+	if (!twilio.validateExpressRequest(req, TWILIO_AUTH_TOKEN, options)) {
 		res.status(401).json({error: "true", message: "Invalid request."});
 		return console.error("Invalid request.");
 	}
