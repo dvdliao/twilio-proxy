@@ -148,8 +148,8 @@ router.post('/', function(req, res, next) {
 			        }
 				});
 
-			} else if (messageContents == "HELP") {
-				sendMessage(resp, null, "Available commands: JOIN, LEAVE, HELP.", group._id, req.body.From, false);
+			} else if (messageContents == "COMMANDS") {
+				sendMessage(resp, null, "Available commands: JOIN, LEAVE, COMMANDS.", group._id, req.body.From, false);
 
 			} else if (elementExists(group.users, 'number', req.body.From)) { // check if sender's number is in group
 				var senderUser = getObjectFromArray(group.users, 'number', req.body.From);
