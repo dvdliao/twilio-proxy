@@ -2,7 +2,7 @@
 
 [https://quiet-springs-2100.herokuapp.com/](https://quiet-springs-2100.herokuapp.com/)
 
-This app uses a number from Twilio as a proxy for group sms messaging. Users can join/leave these groups. Any message sent to the Twilio number will be forwarded to everyone else in the group. The app will also prepend the user's firstname followed by the message: `<User Firstname>: <message>`;
+This app uses a number from Twilio as a proxy for group sms messaging. Users can join/leave these groups. Any message sent to the Twilio number will be forwarded to everyone else in the group. The app will also prepend the user's firstname followed by the message: `<User Firstname>: <message>`
 
 ## Requirements
  - A Twilio Account (non trial) with at least 1 number and in the Twilio settings have the number pointing to your app's endpoint: Your_Host/message
