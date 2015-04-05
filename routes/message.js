@@ -115,6 +115,8 @@ router.post('/', function(req, res, next) {
 
 			// commands
 			if (messageContents.startsWith("JOIN")){
+
+				messageContents = messageContents.trim(); // remove all trailing spaces
 				// user wants to join group
 				// get args arr split on space
 				var args = messageContents.split(' ');
