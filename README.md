@@ -2,7 +2,7 @@
 
 [https://quiet-springs-2100.herokuapp.com/](https://quiet-springs-2100.herokuapp.com/)
 
-This app uses a number from Twilio as a proxy for group sms messaging. Users can join/leave these groups. Any message sent to the Twilio number will be forwarded to everyone else in the group. The app will also prepend the user's firstname followed by the message: &lt;User Firstname&gt;: &lt;message&gt;
+This app uses a number from Twilio as a proxy for group sms messaging. Users can join/leave these groups. Any message sent to the Twilio number will be forwarded to everyone else in the group. The app will also prepend the user's firstname followed by the message: `<User Firstname>: <message>`;
 
 ## Requirements
  - A Twilio Account (non trial) with at least 1 number and in the Twilio settings have the number pointing to your app's endpoint: Your_Host/message
@@ -10,7 +10,7 @@ This app uses a number from Twilio as a proxy for group sms messaging. Users can
  - MongoDB
 
 ## Setup
-Development: create a `.env` file containing the following config vars:
+Development: create a `.env` file containing the following environmental variables:
 	
     MONGOLAB_URI=<mongodb connect string>
 	PORT=<Port to run webserver>
@@ -26,13 +26,13 @@ Change the options url to your web apps url route.
 In the `groups` collection we have documents in this fashion:
 
     {
-	    "_id":"<string> Twilio phone number +11234567890"
+	    "_id":"<string> Twilio phone number +11234567890",
 	    "users":[
 		    {
-			    "_id":<mongo object id>
-			    "number":"<string> a user's phone number +12123456789"
+			    "_id":<mongo object id>,
+			    "number":"<string> a user's phone number +12123456789",
 			    "name":{
-					"first":"<user first name>"
+					"first":"<user first name>",
 					"last":"<user last name>"
 				}
 			}
